@@ -7,7 +7,7 @@ import java.util.List;
  */
 public class ExcelMain {
     public static void main(String[] args){
-        List<SAMPLE> xlsxList = ExcelUtil.GET_SAMPLE_LIST("EXCEL/SAMPLE.xlsx");
+        List<SAMPLE> xlsxList = ExcelUtil.getSampleList("EXCEL/SAMPLE.xlsx");
 
         for (int i = 0; i < xlsxList.size(); i++) {
             System.out.println(xlsxList.get(i).toString());

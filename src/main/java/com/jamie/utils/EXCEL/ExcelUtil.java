@@ -17,7 +17,7 @@ import java.util.List;
  */
 public class ExcelUtil {
 
-    public static List<SAMPLE> GET_SAMPLE_LIST(String filePath) {
+    public static List<SAMPLE> getSampleList(String filePath) {
         // 반환할 객체 List를 생성
         List<SAMPLE> list = new ArrayList<>();
 
