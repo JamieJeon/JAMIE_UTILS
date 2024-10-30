@@ -89,7 +89,9 @@ public class MakeLotto {
     }
 
     private void getLottoNumber() {
-        for(int i=0; i<cnt; i++){
+        HashSet<String> newNumber = new HashSet<>();
+        HashSet<String> result = new HashSet<>();
+        while(result.size() < this.cnt){
             String nums = getNewNums();
             boolean isExist = getAddData(nums);
 
@@ -98,11 +100,15 @@ public class MakeLotto {
                 isExist = getAddData(nums);
             }
 
-            list.add(new Lotto(nums));
+            if(newNumber.contains(nums)){
+                result.add(nums);
+            } else {
+                newNumber.add(nums);
+            }
         }
 
-        for(int i=initTotCnt; i<list.size(); i++){
-            System.out.println(list.get(i).toString());
+        for (String s : result) {
+            System.out.println(s);
         }
     }
 
